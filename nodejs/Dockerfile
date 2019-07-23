@@ -17,7 +17,7 @@ ENV NODE_VERSION=$NODE_VERSION
 RUN touch ~/.bashrc
 
 # INSTALL YARN
-# RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.17.3
 
 # INSTALL NVM
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
