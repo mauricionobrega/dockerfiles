@@ -1,6 +1,11 @@
 FROM node:10.16.0-alpine
 
+# INFO
 MAINTAINER Mauricio Nobrega <mauricio.nobrega@gmail.com>
+LABEL maintainer='mauricio.nobrega@gmail.com'
+LABEL built_in='[alpine@3.9.4, nodejs@10.16.0, yarn@1.17.3, nvm@0.34.0]'
+LABEL site='https://hub.docker.com/u/mauricionobrega/content'
+LABEL build_date='2019-07-23'
 
 # UPDATE ALPINE
 RUN apk update
@@ -12,7 +17,7 @@ ENV NODE_VERSION=$NODE_VERSION
 RUN touch ~/.bashrc
 
 # INSTALL YARN
-RUN curl -o- -L https://yarnpkg.com/install.sh | bash
+# RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
 # INSTALL NVM
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
